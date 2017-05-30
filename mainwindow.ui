@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1453</width>
+    <height>518</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0" colspan="2">
+     <layout class="QGridLayout" name="slidersLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Bitrate</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Bandwidth</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QSlider" name="bandwidthSlider">
+        <property name="maximum">
+         <number>4</number>
+        </property>
+        <property name="value">
+         <number>4</number>
+        </property>
+        <property name="sliderPosition">
+         <number>4</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>LSB depth</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSlider" name="complexitySlider">
+        <property name="maximum">
+         <number>10</number>
+        </property>
+        <property name="pageStep">
+         <number>5</number>
+        </property>
+        <property name="value">
+         <number>10</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Complexity</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSlider" name="bitrateSlider">
+        <property name="minimum">
+         <number>6000</number>
+        </property>
+        <property name="maximum">
+         <number>450000</number>
+        </property>
+        <property name="singleStep">
+         <number>1000</number>
+        </property>
+        <property name="pageStep">
+         <number>10000</number>
+        </property>
+        <property name="value">
+         <number>64000</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="bitrateLabel">
+        <property name="text">
+         <string>0 KBps</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="bandwidthLabel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>fullband</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="complexityLabel">
+        <property name="text">
+         <string>10</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QSlider" name="LSBSlider">
+        <property name="minimum">
+         <number>8</number>
+        </property>
+        <property name="maximum">
+         <number>24</number>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="LSBLabel">
+        <property name="text">
+         <string>24</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="VOIPRadio">
+        <property name="text">
+         <string>&amp;VOIP</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="AudioRadio">
+        <property name="text">
+         <string>A&amp;udio</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="RestriedLowDelayRadio">
+        <property name="text">
+         <string>Restricted &amp;low delay</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="VBRCheck">
+        <property name="text">
+         <string>VBR</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="ConstrainedVBRCheck">
+        <property name="text">
+         <string>Constrained VBR</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="DTXCheck">
+        <property name="text">
+         <string>Discontinuous Transmission (DTX)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>bitrateSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateBitrate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1030</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1026</x>
+     <y>393</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bandwidthSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateBandwidth()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1094</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1084</x>
+     <y>391</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>complexitySlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateComplexity()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1151</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1143</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LSBSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateLSB()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1243</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1238</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VOIPRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateSignal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>413</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AudioRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateSignal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RestriedLowDelayRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateSignal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>342</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>276</x>
+     <y>370</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VBRCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateVBR()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>421</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>425</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ConstrainedVBRCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateConstrainedVBR()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>698</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>733</x>
+     <y>405</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DTXCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>updateDTX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>335</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>364</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateBandwidth()</slot>
+  <slot>updateComplexity()</slot>
+  <slot>updateLSB()</slot>
+  <slot>updateDTX()</slot>
+  <slot>updateVBR()</slot>
+  <slot>updateSignal()</slot>
+  <slot>updateBitrate()</slot>
+  <slot>updateConstrainedVBR()</slot>
+ </slots>
+</ui>
