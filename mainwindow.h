@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QLocalSocket>
+#include "pulsecontrol.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -14,7 +16,8 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    QLocalSocket *socket;
+    PulseControl pc;
+    QString sink = QString("1");
 
     ~MainWindow();
 public slots:

@@ -13,7 +13,7 @@ public:
 
     void sendCommand(QString cmd);
 private:
-    QLocalSocket *socket;
+    QLocalSocket *socket = NULL;
     void init();
 signals:
 
